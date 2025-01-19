@@ -1,0 +1,54 @@
+header{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    border-bottom-color: grey;
+}
+
+h2{
+    font-size: 1rem;
+    border-bottom: 1px solid grey;
+    color: #006eb6;
+}
+
+p:nth-child(2)
+{
+    font-style: italic;
+}
+
+main{
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+    padding: 0%;
+    line-height: 1.5;
+    font-size: 20px;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    size: 150px;
+}
+
+body.dark{
+    background-color: #333;
+    color: white;
+}
+
+.dark h2{
+    color: #4F9ACF;
+}
+/*
+.footer-logo{
+    size: 150px;
+    width: 200px;
+    height: auto;
+}
+
+body{
+    align-content: center;
+}
+*/

@@ -1,0 +1,42 @@
+body{
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand span{
+    font-size: 4em;
+}
+
+.post-summary > img{
+    display: block;
+
+}
+
+.post-summary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.brand{
+    background-color: blue;
+    color: white;
+    display: grid;
+    grid-template-columns: 60px auto; /*by using auto I tell the computer to use whatever is left after the 60px*/
+    max-width: 500px ; /*max is more fluid*/
+    align-items: center;
+}
+
+.brand > h1{
+/*    width: 50%;
+    background-color: blue;*/
+    /*display: inline;*/
+    margin-left: 0.5em;
+
+}
+
+
+
+
