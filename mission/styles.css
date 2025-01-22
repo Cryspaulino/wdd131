@@ -10,8 +10,8 @@ body{
 header{
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .2rem;
-    border-bottom-color: grey;
+    letter-spacing: .4rem;
+    border-bottom-color: rgba(151, 151, 151, 0.877);
 }
 
 h2{
@@ -25,15 +25,15 @@ p:nth-child(2)
     font-style: italic;
 }
 
-main{
+p{
     text-align: left;
 }
 
-footer{
+.footer-logo{
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 150px;
+    align-items: center; 
+    width: 150px;
     margin: 0 auto;
 }
 
