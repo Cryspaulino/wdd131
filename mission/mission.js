@@ -1,16 +1,26 @@
-const themeSelector = document.querySelector('#theme-select');
+const themeSelector = document.querySelector('#theme');
+const logo = document.getElementById('logo');
+const darkLogo = document.getElementById('darkLogo');
+
+/*function logMessage(){
+    console.log('This is a test');
+}
+logMessage();
+*/
 
 function changeTheme() {
-    const theme = themeSelector.theme;
+    const theme = themeSelector.value;
     console.log(`The selected theme is: ${theme}`);
 
-    if (theme === 'Dark') {
-        body.classList.add('Dark');
-        logo.src = 'byui-logo_white.png';
+    if (theme === 'dark') {
+        document.body.classList.add('dark');
+        logo.style.display = 'none';
+        darkLogo.style.display = 'block';
     }
     else {
-        body.classList.remove('Dark');
-        logo.src = 'byui-logo_blue.png';
+        document.body.classList.remove('dark');
+        logo.style.display = 'block'
+        darkLogo.style.display = 'none';
     }
 }
 

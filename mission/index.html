@@ -10,21 +10,15 @@
     <link rel="stylesheet" href="styles.css">
     <script src="mission.js" defer></script>
 
-    <style>
-        body.dark {
-            background-color: black;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
-        <label for="theme-select">Choose a theme</label>
-        <select name="theme" id="theme-select">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-        </select>
-        <button type="dropdown-list">Select</button>
+    <label for="theme">Choose a theme</label>
+    <select name="theme" id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+
     <div class="content">
         <header>
             <h1>Mission Statement</h1>
@@ -48,11 +42,9 @@
 
         </main>
         <footer>
-                <img src="byui-logo_blue.webp" alt="byui-logo" class="footer-logo">
-                <!--<img src="byui-logo_white.png" alt="white-logo">
-            -->
+            <img src="byui-logo_blue.webp" alt="logo-blue" class="logo">
+            <img src="byui-logo_white.png" alt="logo-white" class="dark-logo">
         </footer>
-    </div>
 </body>
 
 </html>

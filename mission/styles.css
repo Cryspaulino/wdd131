@@ -25,11 +25,17 @@ p:nth-child(2)
     font-style: italic;
 }
 
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;    
+}
+
 p{
     text-align: left;
 }
 
-.footer-logo{
+.logo, .dark-logo{
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -37,14 +43,32 @@ p{
     margin: 0 auto;
 }
 
+.logo{
+    display: block;
+}
+
+.darkLogo{
+    display: none;
+}
+
 body.dark{
     background-color: #333;
     color: white;
 }
 
+body.dark .logo{
+    display: none;
+}
+
+body.dark .darkLogo{
+    display: block;
+}
+
 .dark h2{
     color: #4F9ACF;
 }
+
+
 /*
 .footer-logo{
     size: 150px;
