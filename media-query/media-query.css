@@ -1,0 +1,38 @@
+body{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+header, main, footer{
+    max-width: 640px;
+    margin: 1rem auto; /*the way we center a block element is by assigning a width and using margin auto*/
+    padding: 1rem;
+    border: 1px solid #888;
+    background-color: turquoise;
+}
+
+main{
+    display: grid;
+    gap: 1rem;     
+}
+
+section{
+    background-color: white;
+    padding: 1rem;
+}
+
+
+/*PUT THIS AFTER THE DEFAULT BEHAVIOR*/
+@media screen and (min-width: 500px) /*WHEN THE PAGE GOES SMALLER THAN THE MIN THEN IT GOES BACK TO DEFAULT*/ {
+    header{
+        background-color: black;
+        color: white;
+    }
+    
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+/*https://chatgpt.com/share/678fd52e-dcb0-8009-b466-30df168571bc*/
