@@ -13,7 +13,7 @@ document.body.append(newImg); //prepend adds to the top or before. there's befor
 
 const title = 'DOM Basics';
 const subtitle = 'Creating elements and appending them to the DOM';
-const content = 'New Content';
+const content = 'This was added through Javascript';
 const newSection = document.createElement('section');
 
 newSection.innerHTML = 
@@ -28,6 +28,7 @@ const portionData = ['1 15oz can', '1 15oz can', '1 Tbsp', '8'];
 function ingredientTemplate(index) {
     return `<li>${ingredientData[index]}, ${portionData[index]}</li>`
 }
+
 
 /*OPTION 3, A FOREACH LOOP*/
 const myList = document.createElement('ul');
@@ -51,6 +52,8 @@ myList.innerHTML =
 /*CREATE A FOR LOOP */
 
 document.body.append(myList)
+
+
 
 
 

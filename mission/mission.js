@@ -1,6 +1,6 @@
 const themeSelector = document.querySelector('#theme');
-const logo = document.getElementById('logo');
-const darkLogo = document.getElementById('darkLogo');
+const logo = document.querySelector('#logo');
+const darkLogo = document.querySelector('#darkLogo');
 
 /*function logMessage(){
     console.log('This is a test');

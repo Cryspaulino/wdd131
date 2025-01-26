@@ -7,7 +7,7 @@ header, main, footer{
     margin: 1rem auto; /*the way we center a block element is by assigning a width and using margin auto*/
     padding: 1rem;
     border: 1px solid #888;
-    background-color: turquoise;
+    background-color: rgb(41, 194, 179);
 }
 
 main{
