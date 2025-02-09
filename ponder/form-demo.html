@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html" method="get">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p><label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" required>
+                </p>
+        </fieldset>
+        <fieldset>
+            <legend>Payment Information</legend>
+            <p>
+                <label for="payment">Payment Method</label>
+                <select name="payment" id="payment" required>
+                    <option value="">Select payment method</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="credit">Credit card</option>
+                </select>    
+            </p>
+            <!--If I do "<p class="hide"> then it hides the box from the form, I can use this t make it appear only after the user has chosen one of the options to make the next options come back-->
+            <p class="hide" id="creditCardContainer">
+                <label for="creditcard">Credit Card Number</label>
+                <input type="number" name="creditcard" id="creditcard" pattern="[0-9]{16}" placeholder="Enter 16 digits" required>
+            </p>
+            <p class="hide" id="paypalUserContainer">
+                <label for="paypaluser">PayPal Username</label>
+                <input type="text" name="paypaluser" id="paypaluser">
+            </p>
+        </fieldset>
+    
+        <!--
+        <fieldset>
+            <legend>Interests</legend>
+            <p>
+                <label for="games">Games</label>
+                <input type="checkbox" id="games" name="interests">
+            </p>
+            <p>
+                <label for="comics">Comics</label>
+                <input type="checkbox" id="comics" name="interests">
+            </p>
+        </fieldset>
+        -->
+        
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
