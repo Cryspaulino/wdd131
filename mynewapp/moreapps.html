@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Apps</title>
+    <meta name="author" content="Crystal Paulino">
+    <meta name="description" content="A site that recommend applications and separates them into categories">
+    <title>NA | More Apps</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="mynewapp.js" defer></script>
 </head>
+
 <body>
-    
+    <label for="category">Choose a category</label>
+    <select name="category" id="category">
+        <option value="productive">Productivity</option>
+        <option value="gospel">Gospel</option>
+    </select>
+
+    <header>
+        <nav>
+            <img src="./styles/logoone.png" alt="logo" class="logoimg">
+            <a href="index.html">Home</a>
+            <a href="moreapps.html">Other Apps</a>
+        </nav>
+    </header>
+    <main>
+        <section class="prodapps">
+                <img src="./styles/forest.png" alt="forest">
+                <img src="./styles/notion.png" alt="notion">
+        </section>
+        <section class="churchapps">
+            <img src="./styles/familysearch.png" alt="familysearch">
+            <img src="./styles/living.png" alt="gospelliving">
+        </section>
+
+    </main>
+    <footer>
+        <p>My New App &copy; 2025 - Crystal Paulino</p>
+    </footer>
+
 </body>
+
 </html>
