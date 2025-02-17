@@ -11,13 +11,7 @@
     <script src="mynewapp.js" defer></script>
 </head>
 
-<body>
-    <label for="category">Choose a category</label>
-    <select name="category" id="category">
-        <option value="productive">Productivity</option>
-        <option value="gospel">Gospel</option>
-    </select>
-
+<body class="subpage-body">
     <header>
         <nav>
             <img src="./styles/logoone.png" alt="logo" class="logoimg">
@@ -25,17 +19,42 @@
             <a href="moreapps.html">Other Apps</a>
         </nav>
     </header>
+
     <main>
-        <section class="prodapps">
-                <img src="./styles/forest.png" alt="forest">
-                <img src="./styles/notion.png" alt="notion">
-        </section>
-        <section class="churchapps">
-            <img src="./styles/familysearch.png" alt="familysearch">
-            <img src="./styles/living.png" alt="gospelliving">
+        <h1>Find More Apps Here</h1>
+        <section class="category">
+            <label for="category">Choose a category</label>
+            <select name="category" id="category">
+                <option value="productivity">Productivity</option>
+                <option value="gospel">Gospel</option>
+            </select>
         </section>
 
+        <div id="subpage-apps">
+            <section id="prodapps">
+                <div class="forest">
+                    <h2>Forest</h2>
+                    <img src="./styles/forest.png" alt="forest">
+                    <p>Forest is an app designed to help you stay focused on your work, not your phone. It is incredibly
+                        helpful for knocking out homework, responding to emails, and even spending time with friends
+                        without getting distracted. With Forest, users plant digital trees by setting a timer, but if
+                        they leave the app before the timer expires, their tree will die! </p>
+                </div>
+                <div class="notion">
+                    <h2>Notion</h2>
+                    <img src="./styles/notion.png" alt="notion">
+                </div>
+            </section>
+            <section class="hide" id="churchapps">
+                <h2>Family Search</h2>
+                <img src="./styles/familysearch.png" alt="familysearch">
+                <h2>Gospel Living</h2>
+                <img src="./styles/living.png" alt="gospelliving">
+            </section>
+        </div>
+
     </main>
+
     <footer>
         <p>My New App &copy; 2025 - Crystal Paulino</p>
     </footer>

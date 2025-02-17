@@ -31,8 +31,62 @@ Fonts are separated by a | */
   --nav-hover-background-color: var(--primary-color);
 }
 
+main h1{
+  font-size: 3em;
+}
+
+.hide{
+  display: none;
+}
+
+.subpage-body{
+  background-color: #6d6666;
+  
+}
+
+#subpage-apps{
+  /* display: block; */
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  flex-direction: row;
+  padding: 1em;
+  max-width: 100%;
+  
+}
+
+.forest{
+  grid-column: 1/2;
+}
+
+.notion{
+  grid-column: 3/4;
+}
+
+#prodapps p{
+  display: inline-block;
+}
+
+.prodapps{
+  display: block;
+}
+
+.churchapps{
+  display: none;
+}
+
+#subpage-apps img{
+  border-radius: 20%;
+}
+
+
+.category{
+  justify-self: center;
+  font-size: large;
+}
+
 body{
   margin: 0 auto;
+  display: grid;
 }
 
 .logoimg {
@@ -66,6 +120,7 @@ main h1, p{
 
 header{
   font-size: 20px;
+  grid-row: 1/2;
 }
 
 h1,
@@ -174,6 +229,7 @@ footer{
   background-color: #4b4545;
   display: grid;
 }
+
 
 
 

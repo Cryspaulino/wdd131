@@ -1,28 +1,25 @@
-const themeSelector = document.querySelector('#theme');
-// const logo = document.querySelector('#logo');
-// const darkLogo = document.querySelector('#darkLogo');
-
+const categorySelector = document.querySelector('#category');
 /*function logMessage(){
     console.log('This is a test');
 }
 logMessage();
 */
 
-function changeTheme() {
-    const theme = themeSelector.value;
+function changeCategory() {
+    const category = categorySelector.value;
     console.log(`The selected category is: ${category}`);
 
-    if (theme === 'gospel') {
+    if (category === 'gospel') {
         document.body.classList.add('gospel');
-        logo.style.display = 'none';
-        darkLogo.style.display = 'block';
+        prodapps.style.display = 'none';
+        churchapps.style.display = 'block';
     }
     else {
-        document.body.classList.remove('dark');
-        logo.style.display = 'block'
-        darkLogo.style.display = 'none';
+        document.body.classList.remove('gospel');
+        prodapps.style.display = 'block'
+        churchapps.style.display = 'none';
     }
 }
 
-themeSelector.addEventListener('change', changeTheme);
+categorySelector.addEventListener('change', changeCategory);
 
