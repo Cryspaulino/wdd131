@@ -50,9 +50,27 @@ nav a{
 
 main{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 30px;
     padding-top: 20px;
+}
+
+.fullContainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+}
+
+.left{
+    grid-column: 1/2;
+    text-align: right;
+    padding-right: 15px;
+
+}
+
+.article-class{
+    border-left: 1px solid #af1b3f;
+    padding-left: 20px;
 }
 
 #leftsect{
@@ -66,7 +84,7 @@ main{
 }
 
 #articles-container{
-    border-left: 1px solid #af1b3f;
+    /* border-left: 1px solid #af1b3f; */
     text-align: center;
 }
 
