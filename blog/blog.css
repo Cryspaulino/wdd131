@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Patrick+Hand&display=swap');
+
+:root {
+    --primary-color: #efc69b;
+    --secondary-color: #af1b3f;
+    --accent1-color: #473144;
+  
+    --heading-font: Lora, Impact, sans-serif;
+    --paragraph-font: Helvetica, Arial, sans-serif;
+}
+
+
+body{
+    font-family: var(--paragraph-font);
+}
+
+h1{
+    font-family: var(--heading-font)
+}
+
+header{
+    text-align: center;
+}
+
+.skiptocontent a{
+    position: absolute;
+    top: -40px;
+    text-align: left;
+    color: #af1b3f;
+    background-color: #efc69b;
+}
+
+.skiptocontent a:focus{
+    text-align: center;
+}
+
+
+nav{
+    text-align: right;
+    border: 1px solid black;
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 40px;
+}
+
+nav a{
+    color: black;
+    padding-right: 35px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+#leftsect{
+    text-align: end;
+    font-size: 15px;
+}
+
+.date{
+    font-size: 1.2em;
+    padding-top: 7px;
+}
+
+#articles-container{
+    border-left: 1px solid #af1b3f;
+    text-align: center;
+}
+
+.lastsect{
+    text-align: start;
+    border: 1px solid #af1b3f;
+}

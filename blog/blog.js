@@ -23,5 +23,63 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id:4,
+		title: '...'
 	}
 ]
+
+function displayArticles(articles) {
+    const container = document.querySelector("#articles-container");
+
+    articles.forEach(article => {
+        const newArticle = document.createElement("article");
+        newArticle.classList.add("article-class");
+
+        const articleContent = `
+            <h2>${article.title}</h2>
+			<img src="${article.imgSrc}">
+            <p>${article.description}</p>
+        `;
+		const date = document.querySelector("#leftsect");
+		const dateContent = `
+			<h2>${article.date}</h2>
+			<img src="${article.ages}">
+			<p>${article.genre}</p>
+			<p>${article.stars}</p>
+	
+		`;
+
+        newArticle.innerHTML = articleContent;
+        container.appendChild(newArticle);
+    });
+}
+
+displayArticles(articles);
+
+
+
+
+
+
+
+
+
+
+
+
+// const container = document.querySelector("#articles-container");
+// articles.forEach(article => {
+// 	const newArticle = document.createElement("article");
+// 	newArticle.classList.add("article-class");
+// });
+
+// const articleContent = `
+//     <h2>${article.title}</h2>
+//     <p><strong>Date:</strong> ${article.date}</p>
+//     <p>${article.content}</p>
+// `;
+
+// newArticle.innerHTML = articleContent;
+// container.appendChild(newArticle);

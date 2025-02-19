@@ -7,12 +7,22 @@
     <title>Recipes</title>
     <link rel="stylesheet" href="recipes.css">
     <script src="recipes.js" defer></script>
+
+    <meta property="og:title" content="Page Title">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Page Description">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
     <header>
-        <img src="./images/images/recipe-book.png" alt="logoimg" class="logoimg">
-        <h1>RecipeBook</h1>
+        <div class="title">
+            <img src="./images/images/recipe-book.png" alt="logoimg" class="logoimg">
+            <h1>RecipeBook</h1>
+        </div>
+
         <section class="search">
             <form id="searchbox" action="desert.js" method="get"></form>
             <fieldset>
@@ -31,7 +41,7 @@
 
         <section class="dessert">
             <img src="./images/images/apple-crisp.jpg" alt="apple-crisp">
-            <button>dessert</button>
+            <button type="button">dessert</button>
             <h2>Apple Crisp</h2>
 
             <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
@@ -45,17 +55,18 @@
 
     </main>
     <footer>
-        <div class="recicons">
-            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik -
-                Flaticon</a>
-        </div>
-
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
             <a href="#"><img src="./images/images/instagram_icon.svg" alt="instagram icon"></a>
             <a href="#"><img src="images/images/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
+
+        <div class="recicons">
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik -
+                Flaticon</a>
+        </div>
+
     </footer>
 
 </body>
