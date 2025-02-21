@@ -64,6 +64,7 @@ header{
 
 .dessert{
     margin: 30px;
+    /* width: 80%; */
     padding: 30px;
     border: 1px solid black;
     border-radius: 5px;
@@ -72,6 +73,10 @@ header{
 .dessert button{
     font-size: 25px;
     background-color: white;
+}
+
+.dessert p{
+    display: none;
 }
 
 h2{
@@ -107,8 +112,6 @@ footer{
     gap: 10px;
 }
 
-
-
 img {
 	max-width: 100%;
 }
@@ -118,12 +121,38 @@ img {
   }
 
   main {
-    max-width: 600px;
     margin: 0 auto;
   }
 
+  @media screen and (min-width: 600px) {
+        .dessert{
+            display: flex;
+            /*flex-direction: column; */
+            /* flex-direction: row; */
+        }
 
-/* 
-@media screen {
-    
-} */
+        .dessert img{
+            width: 60%;
+            padding-right: 20px;
+        }
+
+        .dessert p{
+            display: block;
+        }
+
+        footer{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+    @media screen and (max-width: 960px) {
+        main{
+            max-width: none;
+        }
+
+        
+    }
+
+
+
+}

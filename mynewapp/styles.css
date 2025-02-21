@@ -31,6 +31,11 @@ Fonts are separated by a | */
   --nav-hover-background-color: var(--primary-color);
 }
 
+.clickableImage{
+  width: 270px;
+  height: auto;
+}
+
 #text {
   display: none;
   font-size: 20px;
@@ -57,31 +62,22 @@ h1 {
 #subpage-apps {
   padding: 1em;
   max-width: 100%;
-}
-
-#subpage-apps img {
-  border-radius: 20%;
-}
-
-.prodapps,
-.churchapps {
+  font-size: 20px;
   display: grid;
   place-items: center;
   grid-template-columns: 2fr 2fr;
   gap: 1rem;
   margin: 1rem auto;
   background-color: var(--accent1-color);
-  /* justify-content: center;  */
+}
 
+#subpage-apps img {
+  border-radius: 20%;
 }
 
 .hide {
   display: none;
 }
-
-/* #prodapps p{
-  display: inline-block;
-} */
 
 .category {
   justify-self: center;
@@ -100,7 +96,8 @@ body {
 }
 
 .logoimg {
-  width: 100px;
+  width: 90px;
+  height: 85px;
   border-radius: 100%;
   padding-block: 10px;
   padding-left: 20px;
@@ -210,6 +207,7 @@ nav a:hover {
 
 footer {
   background-color: #4b4545;
+  color: white;
   display: grid;
 }
 
@@ -218,4 +216,18 @@ footer {
     height: auto;
     max-width: 100%;
   }
+
+}
+
+@media screen and (max-width: 00px) {
+  #hero-img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  #subpage-apps{
+    display: flex;
+    flex-direction: column;
+  }
+
 }

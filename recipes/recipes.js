@@ -1,4 +1,5 @@
-const recipes = [
+// HOW TO EXPORT THIS TO THE MAIN JS 
+ const recipes = [
 	{
 		author: 'Provo High Culinary Students',
 		url: '',
@@ -279,3 +280,58 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+
+const container = document.querySelector("#recipes-container");
+
+function random(num) {
+  return Math.floor(Math.random() * 9);
+}
+
+function getRandomListEntry(list) {
+  const listLength = list.length;
+  const randomNum = random(listLength);
+  return list[randomNum];
+}
+
+console.log(getRandomListEntry(recipes));
+
+
+
+function recipeTemplate(recipe) {
+  return `<figure class="dessert">
+	<img src=${image} />
+	<figcaption>
+		<section>
+			<button type="button">dessert</button>
+			<h2>Apple Crisp</h2>
+
+			<span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+				<span aria-hidden="true" class="icon-star">⭐</span>
+				<span aria-hidden="true" class="icon-star">⭐</span>
+				<span aria-hidden="true" class="icon-star">⭐</span>
+				<span aria-hidden="true" class="icon-star-empty">⭐</span>
+				<span aria-hidden="true" class="icon-star-empty">☆</span>
+			</span>
+
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel incidunt nisi a in hic maxime doloribus velit, ab recusandae sunt placeat eveniet aliquam iusto iure quibusdam rem, impedit quisquam asperiores.</p>
+		</section>
+		
+</figcaption>
+</figure>`;
+}
+
+
+function tagsTemplate(tags) {
+
+  const ul = document.createElement("ul");
+  ul.classList.add("recipe_tags");
+
+  tags.forEach(tag => {
+	let li = `<li>${tag}</li>`
+
+	ul.appendChild(li);
+  });
+
+  return ul;
+}

@@ -95,18 +95,6 @@ function displayArticles(articles) {
 
 displayArticles(articles);
 
-
-
-
-
-
-
-
-
-
-
-
-
 // const container = document.querySelector("#articles-container");
 // articles.forEach(article => {
 // 	const newArticle = document.createElement("article");

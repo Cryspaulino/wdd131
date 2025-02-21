@@ -1,0 +1,45 @@
+const categorySelector = document.querySelector('#category');
+
+function changeCategory() {
+    const category = categorySelector.value; // Get selected category
+    console.log(`The selected category is: ${category}`);
+
+    // Filter apps based on the selected category
+    const filteredApps = descriptions.filter(app => app.type === category);
+
+    // Pass the filtered list to displayApp()
+    displayApp(filteredApps);
+}
+
+// Listen for category changes
+categorySelector.addEventListener('change', changeCategory);
+
+const container = document.querySelector("#subpage-apps");
+
+function appTemplate(app, index) {
+    return `
+        <div class=${app.class}>
+            <h2>${app.name}</h2>
+            <img src=${app.imageSrc} alt=${app.imageAlt} class="clickableImage" data-text="text${index}">
+            <p id="text${index}" class="hide text">${app.description}</p>
+        </div>`;
+}
+
+function displayApp(appList) {
+    container.innerHTML = ""; // Clear previous apps
+
+    appList.forEach((app, index) => {
+        container.innerHTML += appTemplate(app, index);
+    });
+}
+
+// Initial display (show all apps at start)
+displayApp(descriptions);
+
+container.addEventListener("click", function (event) {
+    if (event.target.classList.contains("clickableImage")) {
+        let textId = event.target.getAttribute("data-text");
+        let text = document.getElementById(textId);
+        text.style.display = text.style.display === "none" ? "block" : "none";
+    }
+});

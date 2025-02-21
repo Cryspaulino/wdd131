@@ -3,5 +3,6 @@ Forest description: https://www.wikihow.com/Use-Forest-Productivity-App
 Notion description: https://www.notion.com/help/guides/what-is-notion
 https://en.wikipedia.org/wiki/Notion_(productivity_software)
 
+Family Search description: https://www.familysearch.org/en/mobile-apps/ 
 
-
+Gospel Living description: https://www.churchofjesuschrist.org/youth/childrenandyouth/gospel-living-app?lang=eng
