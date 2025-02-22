@@ -1,22 +1,21 @@
 /* //ALIGN MOVES THINGS IN ROWS AND JUSTIFY IN COLUMNS */
-/* @import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap"); 
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');  */
 :root {
 --primary-color: #1B98E0;
 --secondary-color: #59c3c3;
 --text-dark: #333;
 --text-light: #ebebeb;
 --primary-font: Arial, Helvetica,sans-serif;
---secondary-font: "Patrick Hand";
 }
 
 body{
-    font-family: 'Patrick Hand', Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     margin: 0 auto;
 }
 
 h1{
-    font-family: 'Patrick Hand', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-block;
     font-size: 50px;
 }
@@ -39,17 +38,20 @@ header{
     padding: 1em;
 }
 
-.search{
-    padding-bottom: 20px;
+form{
+    padding: 10px;
     width: 100%;
-
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
-.search img{
-    width: 40px;
+.search button{
+    background-color: white;
+    width: 50px;
     float: right;
     padding-left: 10px;
-    border-left: 1px solid black;
+    border: none;
+    border-left: 2px solid black;
 }
 
 .search input{
@@ -57,25 +59,21 @@ header{
     font-size: 1.5em;
 }
 
-.search fieldset{
-    border-radius: 10px;
-    border: 1px solid black;
-}
-
-.dessert{
-    margin: 30px;
+.template{
+    margin: 60px;
     /* width: 80%; */
     padding: 30px;
     border: 1px solid black;
     border-radius: 5px;
+    font-size: 2em;
 }
 
-.dessert button{
+.template button{
     font-size: 25px;
     background-color: white;
 }
 
-.dessert p{
+.template p{
     display: none;
 }
 
@@ -124,20 +122,19 @@ img {
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 600px) {
-        .dessert{
+  @media screen and (max-width: 600px) {
+        .template{
             display: flex;
-            /*flex-direction: column; */
-            /* flex-direction: row; */
+            flex-direction: column;
         }
 
-        .dessert img{
+        .template img{
             width: 60%;
             padding-right: 20px;
         }
 
-        .dessert p{
-            display: block;
+        .template p{
+            display: none;
         }
 
         footer{
@@ -145,14 +142,33 @@ img {
             justify-content: space-between;
         }
 
-    @media screen and (max-width: 960px) {
+    @media screen and (min-width: 960px) {
+        .template{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .template img{
+            width: 40%;
+        }
         main{
             max-width: none;
+        }      
+        .template{
+            display: flex;
+            flex-direction: row;
+
         }
-
         
+        .template h2{
+            gap: 10px;
+        }
+    
+        .template p{
+            display: block;
+        }
     }
-
-
 
 }

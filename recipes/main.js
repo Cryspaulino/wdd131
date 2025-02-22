@@ -1,6 +1,6 @@
-import { recipes } from "./recipes";
+import recipes from "./recipes.mjs";
 
-const container = document.querySelector("#recipes-container");
+// const container = document.querySelector("#recipes-container");
 
 function random(num) {
   return Math.floor(Math.random() * num);
@@ -12,66 +12,67 @@ function getRandomListEntry(list) {
   return list[randomNum];
 }
 
-console.log(getRandomListEntry(recipes));
-
-
-
 function recipeTemplate(recipe) {
-  return `<figure class="dessert">
-	<img src=${image} />
-	<figcaption>
-		<section>
-            <button type="button">dessert</button>
-            <h2>Apple Crisp</h2>
-
-            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
+  return `<img class="recipeimg" src=${recipe.image} alt="dessert-image"/>
+		<div class="template-text">
+            <button type="button">${tagsTemplate(recipe.tags)}</button>
+            <h2>${recipe.name}</h2>
+            <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+              ${ratingTemplate(recipe.rating)}
             </span>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel incidunt nisi a in hic maxime doloribus velit, ab recusandae sunt placeat eveniet aliquam iusto iure quibusdam rem, impedit quisquam asperiores.</p>
-        </section>
-        
-</figcaption>
-</figure>`;
+            <p>${recipe.description}</p>
+        </div>`;
 }
-
 
 function tagsTemplate(tags) {
 
-  const ul = document.createElement("ul");
-  ul.classList.add("recipe_tags");
+  return tags.map(tag => `<span>${tag}</span>`).join(", ");
 
-  tags.forEach(tag => {
-    let li = `<li>${tag}</li>`
+  // const ul = document.createElement("ul");
+  // ul.classList.add("recipe_tags");
 
-    ul.appendChild(li);
-  });
+  // tags.forEach(tag => {
+  //   let li = `<li>${tag}</li>`
 
-  return ul;
+  //   ul.appendChild(li);
+  // });
+
+  // return ul;
 }
 
 function ratingTemplate(rating) {
-  // begin building an html string using the ratings HTML written earlier as a model.
-  let html = `<span
-	class="rating"
-	role="img"
-	aria-label="Rating: ${rating} out of 5 stars"
->`
-  // our ratings are always out of 5, so create a for loop from 1 to 5
+  let html = ``;
 
-  // for
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+    } else {
+      `<span aria-hidden="true" class="icon-star-empty">☆</span>`
+    }
+  }
 
-		// check to see if the current index of the loop is less than our rating
-		// if so then output a filled star
+  html += `</span>`;
 
-		// else output an empty star
-
-	// after the loop, add the closing tag to our string
-	// html += `</span>`
-
-	// return html
+  return html;
 }
+
+const recipe = getRandomListEntry(recipes);
+console.log(recipeTemplate(recipe));
+
+function renderRecipes(recipeList) {
+  const outputElement = document.querySelector(".template");
+
+  const recipesHtml = recipeList.map(recipe => recipeTemplate(recipe)).join("");
+
+  outputElement.innerHTML = recipesHtml
+
+}
+
+function init() {
+  const recipeRandom = getRandomListEntry(recipes);
+
+  renderRecipes([recipeRandom]);
+}
+init()
+
+// console.log(getRandomListEntry(recipes));

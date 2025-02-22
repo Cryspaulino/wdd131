@@ -3,7 +3,7 @@ const descriptions = [
         name: "Forest",
         class: "forest",
         type: "productivity",
-        description: "Forest is an app designed to help you stay focused on your work, not your phone. It is incredibly helpful for knocking out homework, responding to emails, and even spending time with friends without getting distracted. With Forest, users plant digital trees by setting a timer, but if they leave the app before the timer expires, their tree will die!",
+        description: "Forest is an app designed to help you stay focused on your work instead of your phone. It is  helpful for doing homework, responding to emails, and even spending time with friends without getting distracted. Plant digital trees by setting a timer and completing your tasks.",
         imageSrc: "./styles/forest.png",
         imageAlt: "forest-logo"
     },

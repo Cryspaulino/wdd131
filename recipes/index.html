@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
     <link rel="stylesheet" href="recipes.css">
-    <script src="recipes.js" defer></script>
-
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=patrick-hand">
+    <script type="module" src="./main.js" defer></script>
     <meta property="og:title" content="Recipes">
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A page to search and find different recipes">
@@ -24,18 +24,20 @@
         </div>
 
         <section class="search">
-            <form id="searchbox" action="desert.js" method="get"></form>
-            <fieldset>
-                <input type="search" placeholder="Find a recipe">
+            <form id="searchbox" action="inputSearch">
                 <label for="lookrecipe"></label>
-                <img src="./images/images/search.svg" alt="">
-            </fieldset>
+                <input type="search" placeholder="Find a recipe">
+                <button type="submit" title="search">
+                    <img src="./images/images/search.svg" alt="">
+                    <i class="fa-solid fa-magnifying-class"></i>
+                </button>
+            </form>
         </section>
     </header>
     <main>
-        <div id="recipes-container"></div>
+        <div class="template" id="recipe-template">
 
-        <section class="dessert">
+            <!-- <section class="dessert">
             <img src="./images/images/apple-crisp.jpg" alt="apple-crisp">
             <div>
                 <button type="button">dessert</button>
@@ -53,9 +55,9 @@
                     velit, ab recusandae sunt placeat eveniet aliquam iusto iure quibusdam rem, impedit quisquam
                     asperiores.</p>
             </div>
-        </section>
+        </section> -->
 
-
+        </div>
     </main>
     <footer>
         <div class="social">
